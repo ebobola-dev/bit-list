@@ -20,9 +20,22 @@ int main() {
 			}
 		}
 
-		printf("Всего ламп: %d\n\n", lampCount);
+		BitList lampList(lampCount);
+		printf("Создано ячеек: %u, для %u бит(а)\n", lampList.getCellSize(), lampList.getBitSize());
+		printf("Вид:\n");
+		cout << lampList << endl;
 
-		BitList bitList(lampCount);
+		for (int i = 0; i < 10; i++) {
+			int index = 0;
+			int value = 0;
+			printf("Введите номер бита и новое значение: ");
+			cin >> index >> value;
+			lampList.set(index, value);
+			cout << lampList << endl;
+			printf("Введите индекс: ");
+			cin >> index;
+			printf("Значение бита по индексу %d: %u\n", index, lampList[index]);
+		}
 	}
 	return 0;
 }

@@ -4,4 +4,5 @@ enum class BitListError {
 	NegativeSize,
 	NegativeIndex,
 	IndexOutOfRange,
+	ErrorBitValue,
 };
