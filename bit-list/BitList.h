@@ -9,6 +9,7 @@ class BitList {
 	uint32_t bitSize;
 
 	uint32_t _getCellSizeFromBitSize(uint32_t);
+	std::ostream& _printBitList(std::ostream& os, bool = false) const;
 
 public:
 	BitList(int32_t);
@@ -25,5 +26,9 @@ public:
 	uint32_t getCellOfBit(int32_t) const;
 
 	void set(int32_t, int8_t);
+	void setToAll(int8_t);
+	void printFullBitList() const;
+	bool isValidIndex(int32_t) const;
+	bool isValidBitValue(int32_t) const;
 };
 
